@@ -1,0 +1,26 @@
+﻿<Window x:Class="CommunicationWithArduino.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommunicationWithArduino"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="tbl1" HorizontalAlignment="Left" Margin="191,103,0,0" TextWrapping="Wrap" Text="{Binding TempC}" VerticalAlignment="Top" Height="20" Width="100"/>
+        <Label Content="Temperatur i stalden (C)" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="Køl" HorizontalAlignment="Left" Margin="50,150,0,0" VerticalAlignment="Top"/>
+        <Label Content="Varme" HorizontalAlignment="Left" Margin="50,181,0,0" VerticalAlignment="Top"/>
+        <Label Content="OK" HorizontalAlignment="Left" Margin="50,212,0,0" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{Binding Vcheck}" Content="CheckBox" HorizontalAlignment="Left" Margin="98,186,0,0" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{Binding Kcheck}" Content="CheckBox" HorizontalAlignment="Left" Margin="98,155,0,0" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{Binding Ocheck}" Content="CheckBox" HorizontalAlignment="Left" Margin="98,218,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding ComPorts}" SelectedItem="{Binding SelectedComPort}" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_connect" Content="{Binding BtnName}" HorizontalAlignment="Left" Margin="416,12,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click" Height="20"/>
+        <Label Content="Sat Temperatur (C)" HorizontalAlignment="Left" Margin="427,100,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tbl1_Copy" HorizontalAlignment="Left" Margin="540,103,0,0" TextWrapping="Wrap" Text="{Binding TempCsat}" VerticalAlignment="Top" Height="20" Width="50"/>
+        <TextBox HorizontalAlignment="Left" Margin="540,128,0,0" TextWrapping="Wrap" Text="{Binding TempInput}" VerticalAlignment="Top" Width="50"/>
+        <Button Content="Sæt Temperatur" HorizontalAlignment="Left" Margin="595,126,0,0" VerticalAlignment="Top" Width="90" Height="20" Click="setTempViaSerial"/>
+
+    </Grid>
+</Window>
