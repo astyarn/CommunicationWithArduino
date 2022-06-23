@@ -6,3 +6,6 @@ The setup is simulation a barn were temperature has to be measured and indicated
 
 Data from the Arduino is send to a WPF app via serial communication. Additionally the desired temperature can be set via the WPF app,
 and also send to the Arduino via serial communication.
+
+#Code
+The code is in two parts. The Visual Studio project containing the wpf app, and the .ino file containing the code uploaded to the Arduino.
