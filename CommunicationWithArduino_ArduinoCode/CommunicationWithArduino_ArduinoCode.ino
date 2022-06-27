@@ -1,6 +1,5 @@
 int temp = 0;     //raw temp
 int tempC = 0;    //degrees celcius
-int lys = 0;      //raw light
 double convertTemp = 0.5; //conversion variable for raw to degrees celcius
 int k, v, o;
 
@@ -66,10 +65,7 @@ void loop() {
   {
   temp = analogRead(tempPin);
   }
-  for(int j = 0; j<3; j++)
-  {
-  lys = analogRead(lightPin);
-  }
+  
   tempC = temp*convertTemp;
 
   if(Serial.available())  //If data is received on the serial connection, start processing it
