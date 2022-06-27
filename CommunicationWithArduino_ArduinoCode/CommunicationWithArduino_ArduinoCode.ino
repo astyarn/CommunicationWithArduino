@@ -12,7 +12,7 @@ byte red = 5;     //Heating
 byte green = 6;
 byte yellow = 7;  //cooling
 byte tempPin = 0;   //analog pin to read temp from (LM35)
-byte lightPin = 1;  //analog pin to read light values from
+byte lightPin = 1;  //analog pin to read light values from LDR
 
 
 //-----------------------------------------
